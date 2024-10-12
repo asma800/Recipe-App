@@ -11,7 +11,6 @@
         },
         {
             "cuisine": "British",
-            "name": "Apple & Blackberry Crumble",
             "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/535dfe4e-5d61-4db6-ba8f-7a27b1214f5d/large.jpg",
             "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/535dfe4e-5d61-4db6-ba8f-7a27b1214f5d/small.jpg",
             "source_url": "https://www.bbcgoodfood.com/recipes/778642/apple-and-blackberry-crumble",
@@ -90,12 +89,10 @@
         },
         {
             "cuisine": "Canadian",
-            "name": "Canadian Butter Tarts",
             "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/f18384e7-3da7-4714-8f09-bbfa0d2c8913/large.jpg",
             "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/f18384e7-3da7-4714-8f09-bbfa0d2c8913/small.jpg",
             "source_url": "https://www.bbcgoodfood.com/recipes/1837/canadian-butter-tarts",
-            "uuid": "39ad8233-c470-4394-b65f-2a6c3218b935",
-            "youtube_url": "https://www.youtube.com/watch?v=WUpaOGghOdo"
+            "uuid": "39ad8233-c470-4394-b65f-2a6c3218b935"
         },
         {
             "cuisine": "British",
@@ -303,7 +300,6 @@
         },
         {
             "cuisine": "British",
-            "name": "Mince Pies",
             "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/8f69452d-d1af-4a5c-9461-203611502b30/large.jpg",
             "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/8f69452d-d1af-4a5c-9461-203611502b30/small.jpg",
             "source_url": "https://www.bbcgoodfood.com/recipes/2174/unbelievably-easy-mince-pies",
@@ -325,8 +321,7 @@
             "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/9d257442-51c8-45c7-807a-e6132baa8fce/large.jpg",
             "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/9d257442-51c8-45c7-807a-e6132baa8fce/small.jpg",
             "source_url": "https://www.bbcgoodfood.com/recipes/2869/new-york-cheesecake",
-            "uuid": "b63fbae1-f5d1-41a7-a030-1a3a556f4c57",
-            "youtube_url": "https://www.youtube.com/watch?v=tspdJ6hxqnc"
+            "uuid": "b63fbae1-f5d1-41a7-a030-1a3a556f4c57"
         },
         {
             "cuisine": "American",
@@ -531,8 +526,7 @@
             "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/51271127-2c5f-4b65-87d4-f56f8f9a9549/large.jpg",
             "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/51271127-2c5f-4b65-87d4-f56f8f9a9549/small.jpg",
             "source_url": "https://www.bbcgoodfood.com/recipes/tarte-tatin",
-            "uuid": "744859ba-df52-4d56-b919-55fab43e8a45",
-            "youtube_url": "https://www.youtube.com/watch?v=8xDM8U6h9Pw"
+            "uuid": "744859ba-df52-4d56-b919-55fab43e8a45"
         },
         {
             "cuisine": "Canadian",

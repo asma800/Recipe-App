@@ -10,27 +10,43 @@ import XCTest
 
 final class Recipe_appTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+var testRecipes: [Recipe] = []
+    
+    override func setUp() {
+        super.setUp()
+        if let url = Bundle.main.url(forResource: "recipes", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decodedResponse = try JSONDecoder().decode(RecipeResponse.self, from: data)
+                testRecipes = decodedResponse.recipes
+            } catch {
+                XCTFail("Failed to decode JSON file: \(error.localizedDescription)")
+            }
+        } else {
+            XCTFail("Could not find test recipes.json file.")
         }
     }
-
+    
+    func testRecipeIntegrity() {
+        for recipe in testRecipes {
+            XCTAssertFalse(recipe.cuisine.isEmpty, "Recipe is missing a cuisine.")
+            XCTAssertFalse(recipe.name.isEmpty, "Recipe is missing a name.")
+            XCTAssertFalse(recipe.uuid.isEmpty, "Recipe is missing a UUID.")
+        }
+    }
+    
+    func testRecipesArrayNotEmpty() {
+        XCTAssertFalse(testRecipes.isEmpty, "Recipes array should not be empty.")
+    }
+        
+    func testRecipePhotoURL() {
+        for recipe in testRecipes {
+            guard let photoURL = URL(string: recipe.photo_url_large) else {
+                XCTFail("Invalid photo URL for recipe: \(recipe.name)")
+                continue
+            }
+            
+            XCTAssertTrue(photoURL.scheme == "https", "Recipe photo URL is not secure (https).")
+        }
+    }
 }

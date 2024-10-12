@@ -8,8 +8,6 @@ class RecipeViewModel: ObservableObject {
         if let url = Bundle.main.url(forResource: "recipes", withExtension: "json") {
             print("URL to JSON file: \(url)") // This will print the URL in the console
             
-
-            
             do {
                 // Load the data from the file
                 let data = try Data(contentsOf: url)
@@ -20,6 +18,10 @@ class RecipeViewModel: ObservableObject {
                 // Update the recipes array on the main thread
                 DispatchQueue.main.async {
                     self.recipes = decodedResponse.recipes
+                    
+                    // Sort the recipes by cuisine type
+                    self.recipes.sort { $0.cuisine < $1.cuisine }
+                    
                     print("Successfully loaded \(self.recipes.count) recipes.") // Optional: log number of recipes loaded
                 }
             } catch {
